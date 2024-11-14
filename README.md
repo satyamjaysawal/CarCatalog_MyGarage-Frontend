@@ -130,9 +130,9 @@ cd car-management-app
 5. Use the **Search Bar** to find specific cars using keywords.
 
 ---
+![image](https://github.com/user-attachments/assets/4bb33f39-1f16-49b9-ba90-0e33ec09c0f8)
 
 ![image](https://github.com/user-attachments/assets/1bd660be-2706-4b0a-9648-63600b1309d9)
-
 ![image](https://github.com/user-attachments/assets/bb0496da-4b05-4281-8552-9ee351fa4325)
 
 
