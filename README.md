@@ -1,70 +1,145 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Car Management Application 🚗
 
-In the project directory, you can run:
+## Overview
+The **Car Management Application** is a full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js). This application allows users to manage their car inventory with features such as adding, viewing, editing, and deleting cars. Each car can have up to 10 images, a title, a description, and associated tags. The app supports user authentication and authorization, ensuring users can only manage their own cars. Additionally, it provides a search functionality for filtering cars based on keywords.
 
-### `npm start`
+## Features
+1. **User Authentication**: Sign up and log in with secure JWT-based authentication.
+2. **Car Management**:
+   - Create cars with up to 10 images, a title, description, and tags.
+   - View all cars created by the logged-in user.
+   - Edit car details including images, title, description, and tags.
+   - Delete a car.
+3. **Global Search**: Search for cars based on keywords in the title, description, or tags.
+4. **Car Details**: View detailed information about a specific car.
+5. **API Documentation**: All backend APIs are documented using Postman.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+### Frontend
+- **React**: A JavaScript library for building user interfaces.
+- **Axios**: For making HTTP requests to the backend API.
+- **React Router**: For client-side routing.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- **Node.js**: JavaScript runtime for server-side programming.
+- **Express**: A web application framework for Node.js.
+- **MongoDB**: NoSQL database to store users and car data.
+- **Mongoose**: ODM library for MongoDB and Node.js.
+- **JWT**: JSON Web Tokens for secure user authentication.
+- **Cloudinary**: (Optional) for image storage if needed.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- **Node.js** and **npm** installed.
+- **MongoDB** instance running locally or use a cloud provider like MongoDB Atlas.
+- (Optional) **Vercel** for deploying the frontend.
+- (Optional) **Heroku** or similar cloud provider for backend deployment.
 
-### `npm run build`
+### Clone the Repository
+```bash
+git clone https://github.com/your-username/car-management-app.git
+cd car-management-app
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Setup
+1. Navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `backend` directory and add your environment variables:
+   ```env
+   PORT=5000
+   MONGO_URI=your-mongodb-connection-string
+   JWT_SECRET=your-jwt-secret
+   ```
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend Setup
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd ../frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file in the `frontend` directory for the API URL:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000/api
+   ```
+4. Start the frontend development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Endpoints
+### **Authentication**
+- `POST /api/auth/signup` - Sign up a new user.
+- `POST /api/auth/login` - Log in a user and get a JWT token.
 
-### `npm run eject`
+### **Car Management**
+- `POST /api/cars` - Create a new car.
+- `GET /api/cars` - List all cars for the authenticated user.
+- `GET /api/cars/search?keyword={keyword}` - Search cars based on a keyword.
+- `GET /api/cars/:id` - Get details of a specific car.
+- `PUT /api/cars/:id` - Update a car’s information.
+- `DELETE /api/cars/:id` - Delete a car.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
+### **Frontend Deployment** (Vercel)
+1. Push your frontend code to a GitHub repository.
+2. Go to [Vercel](https://vercel.com) and create a new project.
+3. Import the repository and set up the project.
+4. Configure environment variables in the Vercel dashboard.
+5. Deploy the project and get the live URL.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Backend Deployment** (Heroku)
+1. Install the Heroku CLI and log in:
+   ```bash
+   heroku login
+   ```
+2. Create a new Heroku app:
+   ```bash
+   heroku create your-app-name
+   ```
+3. Add your MongoDB URI and JWT secret as environment variables in Heroku:
+   ```bash
+   heroku config:set MONGO_URI=your-mongodb-uri JWT_SECRET=your-secret
+   ```
+4. Deploy to Heroku:
+   ```bash
+   git push heroku main
+   ```
+5. Get the live URL for the backend and update your frontend API URL if necessary.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
+1. **Sign Up** using the registration page.
+2. **Log In** to access your dashboard.
+3. **Add Cars** via the form, including images, title, description, and tags.
+4. **View, Edit, or Delete Cars** from the dashboard.
+5. Use the **Search Bar** to find specific cars using keywords.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+![image](https://github.com/user-attachments/assets/4bb33f39-1f16-49b9-ba90-0e33ec09c0f8)
 
-## Learn More
+![image](https://github.com/user-attachments/assets/1bd660be-2706-4b0a-9648-63600b1309d9)
+![image](https://github.com/user-attachments/assets/bb0496da-4b05-4281-8552-9ee351fa4325)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/user-attachments/assets/303579ed-d99c-4a43-b764-3504cd3a14e2)
 
-### Code Splitting
+![image](https://github.com/user-attachments/assets/e40fa6db-433a-43b5-b26f-65e1772705d7)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
