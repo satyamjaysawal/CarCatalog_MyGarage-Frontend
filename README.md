@@ -129,4 +129,17 @@ cd car-management-app
 4. **View, Edit, or Delete Cars** from the dashboard.
 5. Use the **Search Bar** to find specific cars using keywords.
 
+---
 
+![image](https://github.com/user-attachments/assets/1bd660be-2706-4b0a-9648-63600b1309d9)
+
+![image](https://github.com/user-attachments/assets/bb0496da-4b05-4281-8552-9ee351fa4325)
+
+
+![image](https://github.com/user-attachments/assets/303579ed-d99c-4a43-b764-3504cd3a14e2)
+
+![image](https://github.com/user-attachments/assets/e40fa6db-433a-43b5-b26f-65e1772705d7)
+
+
+
+---
