@@ -40,7 +40,9 @@ The **Car Management Application** is a full-stack web application built using t
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/car-management-app.git
+git clone https://github.com/satyamjaysawal/CarCatalog_MyGarage-backend.git
+
+git clone https://github.com/satyamjaysawal/CarCatalog_MyGarage-Frontend.git
 cd car-management-app
 ```
 
